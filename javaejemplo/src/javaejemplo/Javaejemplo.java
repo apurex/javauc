@@ -6,6 +6,7 @@
 package javaejemplo;
 
 import static java.time.Clock.system;
+import java.util.Scanner;
 
 /**
  *
@@ -22,7 +23,14 @@ public class Javaejemplo {
         int edad;
         String nom;
         
+        Scanner entrada = new Scanner(System.in);
+        
         System.out.println("Probando Git");
+        System.out.println("Como es Tu nombre  ");
+        nom = entrada.nextLine();
+        System.out.println(" Hola " + nom);
+        
+        
         
     }
     
