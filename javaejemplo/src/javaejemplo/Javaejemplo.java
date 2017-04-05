@@ -5,6 +5,7 @@
  */
 package javaejemplo;
 
+import java.io.PrintStream;
 import static java.time.Clock.system;
 import java.util.Scanner;
 
@@ -20,18 +21,40 @@ public class Javaejemplo {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        int edad;
-        String nom;
+        //Programa de Encriptacion Simple
+        
+        String str;
+        String aux = "";
+        char[] n;
         
         Scanner entrada = new Scanner(System.in);
         
-        System.out.println("Probando Git");
-        System.out.println("Como es Tu nombre  ");
-        nom = entrada.nextLine();
-        System.out.println(" Hola " + nom);
+        //Inicio Programa
+        
+        do {
+            
+            System.out.println("Bienvenido a SimpleEncrip \n");
+            System.out.println("Por Favor Introdusca la palabra a Encriptar o 'Salir' para cerrar \n");
+            
+            str = entrada.nextLine();
+            
+            n = str.toCharArray();
+            
+            for (int i = 0; i < n.length ; i++) {
+                
+                n[i]+=2;
+                
+            }
+            
+            aux = String.valueOf(n);
+            
+            System.out.println(aux + "\n");
+            System.out.println("Encriptacion Finalizada \n");
+            
+        } while (!str.equals("salir"));
         
         
-        
+
     }
     
 }
